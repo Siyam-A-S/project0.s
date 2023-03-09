@@ -143,6 +143,39 @@ seventh:# Print the 7th line:
 	
 	jal Print_Newln			# Print the new line
 
+
+eighth:	# Print the 8thline:
+	la $a0, 3($t0)			# Load the address of index 3 into $a0
+	jal Print_Str			# Print the string
+	
+	lb $a0, 0($t0)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 1($t0)			# Load the character at index 1
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 2($t0)			# Load the character at index 2
+	jal Print_Char			# Print the character at $a0
+	
+	jal Print_Newln			# Print the new line
+
+
+ninth:	# Print the 9th line:
+	la $a0, 4($t0)			# Load the address of index 4 into $a0
+	jal Print_Str			# Print the string
+	
+	lb $a0, 0($t0)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 1($t0)			# Load the character at index 1
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 2($t0)			# Load the character at index 2
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 3($t0)			# Load the character at index 3
+	jal Print_Char			# Print the character at $a0
+
 # Exit the program																																																						
 	li $v0, 10			# system call to stop the program		
 	syscall				# close the program
