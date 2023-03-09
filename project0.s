@@ -18,3 +18,14 @@ Print_Str:
 	li $v0, 4			# system call for printing a string
 	syscall				# print the string
 	jr $ra				# jump register
+
+Print_Char:
+	li $v0, 11			# system call for print a character
+	syscall				# print the character
+	jr $ra				# jump register
+
+Print_Newln:
+	li $a0, 10			# load the ascii of a line break to $a0
+	li $v0, 11			# system call for print a character
+	syscall				# add a new line
+	jr $ra				# jump register
