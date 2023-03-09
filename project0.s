@@ -8,7 +8,29 @@ main:
 	# id % N = 03043178 % 7 = 5 
 	# My starting index value is (5+m)%9 where m = 0, 1, 2, 3, 4 ,...., 8 for 9 strings respectively.
 
+first:  # Print first string
+	
+	
+	la $a0, 5($t0)			# Load the adreess of the index 5 at $a0
+	jal Print_Str			# Print the string
 
+	lb $a0, 0($t0)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 1($t0)			# Load the character at index 1
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 2($t0)			# Load the character at index 2
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 3($t0)			# Load the character at index 3
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 4($t0)			# Load the character at index 4
+	jal Print_Char			# Print the character at $a0
+										
+	
+	jal Print_Newln
 
 # Exit the program																																																						
 	li $v0, 10			# system call to stop the program		
