@@ -32,6 +32,57 @@ first:  # Print first string
 	
 	jal Print_Newln
 
+second:	# Print the 2nd line:
+	la $a0, 6($t0)			# Load the address of index 6 at $a0
+	jal Print_Str			# Print the string
+	
+	lb $a0, 0($t0)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 1($t0)			# Load the character at index 1
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 2($t0)			# Load the character at index 2
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 3($t0)			# Load the character at index 3
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 4($t0)			# Load the character at index 4
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 5($t0)			# Load the character at index 5
+	jal Print_Char			# Print the character at $a0
+																						
+	jal Print_Newln		        # Print the new line
+
+third:  # Print the 3rd line:
+	la $a0, 7($t0)			# Load the address of index 7 into $a0
+	jal Print_Str			# Print the string
+	
+	lb $a0, 0($t0)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 1($t0)			# Load the character at index 1
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 2($t0)			# Load the character at index 2
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 3($t0)			# Load the character at index 3
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 4($t0)			# Load the character at index 4
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 5($t0)			# Load the character at index 5
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 6($t0)			# Load the character at index 6
+	jal Print_Char			# Print the character at $a0
+																						
+	jal Print_Newln			# Print the new line
+
 # Exit the program																																																						
 	li $v0, 10			# system call to stop the program		
 	syscall				# close the program
