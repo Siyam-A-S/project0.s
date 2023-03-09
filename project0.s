@@ -113,6 +113,14 @@ fourth:	# Print the 4th line:
 																																																																		
 	jal Print_Newln			# Print the new line
 
+fifth:	# Print the 5th line:
+	# Index = (5+4)%9 = 0
+
+	la $a0, 0($t0)			# Load the address of index 0 into $a0
+	jal Print_Str			# Print the string
+
+	jal Print_Newln			# Print the new line
+
 # Exit the program																																																						
 	li $v0, 10			# system call to stop the program		
 	syscall				# close the program
