@@ -121,6 +121,28 @@ fifth:	# Print the 5th line:
 
 	jal Print_Newln			# Print the new line
 
+sixth:	# Print the 6th line:
+	
+	la $a0, 1($t0)			# Load the address of index 1 into $a0
+	jal Print_Str			# Print the string
+	
+	lb $a0, 0($t0)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
+	
+	jal Print_Newln			# Print the new line
+
+seventh:# Print the 7th line:
+	la $a0, 2($t0)			# Load the address of index 2 into $a0
+	jal Print_Str			# Print the string
+	
+	lb $a0, 0($t0)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
+	
+	lb $a0, 1($t0)			# Load the character at index 1
+	jal Print_Char			# Print the character at $a0
+	
+	jal Print_Newln			# Print the new line
+
 # Exit the program																																																						
 	li $v0, 10			# system call to stop the program		
 	syscall				# close the program
