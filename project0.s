@@ -56,7 +56,8 @@ second:	# Print the 2nd line:
 	lb $a0, 5($t0)			# Load the character at index 5
 	jal Print_Char			# Print the character at $a0
 																						
-	jal Print_Newln		        # Print the new line
+	lb $a0, 0($t1)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
 
 third:  # Print the 3rd line:
 	la $a0, 7($t0)			# Load the address of index 7 into $a0
@@ -83,7 +84,8 @@ third:  # Print the 3rd line:
 	lb $a0, 6($t0)			# Load the character at index 6
 	jal Print_Char			# Print the character at $a0
 																						
-	jal Print_Newln			# Print the new line
+	lb $a0, 0($t1)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
 
 fourth:	# Print the 4th line:
 	la $a0, 8($t0)			# Load the address of index 8 into $a0
@@ -113,7 +115,8 @@ fourth:	# Print the 4th line:
 	lb $a0, 7($t0)			# Load the character at index 7
 	jal Print_Char			# Print the character at $a0
 																																																																		
-	jal Print_Newln			# Print the new line
+	lb $a0, 0($t1)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
 
 fifth:	# Print the 5th line:
 	# Index = (5+4)%9 = 0
@@ -121,7 +124,8 @@ fifth:	# Print the 5th line:
 	la $a0, 0($t0)			# Load the address of index 0 into $a0
 	jal Print_Str			# Print the string
 
-	jal Print_Newln			# Print the new line
+	lb $a0, 0($t1)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
 
 sixth:	# Print the 6th line:
 	
@@ -131,7 +135,8 @@ sixth:	# Print the 6th line:
 	lb $a0, 0($t0)			# Load the character at index 0
 	jal Print_Char			# Print the character at $a0
 	
-	jal Print_Newln			# Print the new line
+	lb $a0, 0($t1)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
 
 seventh:# Print the 7th line:
 	la $a0, 2($t0)			# Load the address of index 2 into $a0
@@ -143,7 +148,8 @@ seventh:# Print the 7th line:
 	lb $a0, 1($t0)			# Load the character at index 1
 	jal Print_Char			# Print the character at $a0
 	
-	jal Print_Newln			# Print the new line
+	lb $a0, 0($t1)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
 
 
 eighth:	# Print the 8thline:
@@ -159,7 +165,8 @@ eighth:	# Print the 8thline:
 	lb $a0, 2($t0)			# Load the character at index 2
 	jal Print_Char			# Print the character at $a0
 	
-	jal Print_Newln			# Print the new line
+	lb $a0, 0($t1)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
 
 
 ninth:	# Print the 9th line:
