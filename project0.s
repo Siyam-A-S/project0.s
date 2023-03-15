@@ -1,9 +1,10 @@
 .data
-id: .asciiz "@03043178"
-
+	id: .asciiz "@03043178"
+	newline: .asciiz "\n"
 .text
 main:
 	la $t0, id			# Load the address of the string in id
+	la $t1, newline			# Load the address of the newline
 	
 	# id % N = 03043178 % 7 = 5 
 	# My starting index value is (5+m)%9 where m = 0, 1, 2, 3, 4 ,...., 8 for 9 strings respectively.
@@ -30,7 +31,8 @@ first:  # Print first string
 	jal Print_Char			# Print the character at $a0
 										
 	
-	jal Print_Newln
+	lb $a0, 0($t1)			# Load the character at index 0
+	jal Print_Char			# Print the character at $a0
 
 second:	# Print the 2nd line:
 	la $a0, 6($t0)			# Load the address of index 6 at $a0
@@ -190,8 +192,3 @@ Print_Char:
 	syscall				# print the character
 	jr $ra				# jump register
 
-Print_Newln:
-	li $a0, 10			# load the ascii of a line break to $a0
-	li $v0, 11			# system call for print a character
-	syscall				# add a new line
-	jr $ra				# jump register
